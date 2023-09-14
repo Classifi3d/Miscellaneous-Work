@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orpheus</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <script src="static/js/scripts.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+            $(function() {
+            $('a#test').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/spotify',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            });
+    </script> -->
+</head>
+<body>
+    <div class="flex-container">
+        <img class="margin2" src="{{ url_for('static', filename='img/column.jpeg') }}">
+        <img class="margin" src="{{ url_for('static', filename='img/column.jpeg') }}">
+        <div>
+            <div class="title">Orpheus</div>
+            <div ><img class="picture" src="{{ url_for('static', filename='img/lyre.jpeg') }}"></div>
+            <div class="text" >Song Name</div>
+            <div class="input"><input id="song" type="text"></div>
+            <div class="text" >Artist's Name</div>
+            <div class="input"><input id="artist" type="text"></div>
+            <div class="input"><a href=# id=test><button type="button" onclick="searchSong()">  Search  </button></a>></div>
+            <div class="text">Song's Mood:</div>
+            <div class="mood" id="mood"> < MOOD > </div>
+            <div class="color" id="square"></div>
+        </div>
+        <img class="margin" src="{{ url_for('static', filename='img/column.jpeg') }}">
+        <img class="margin2" src="{{ url_for('static', filename='img/column.jpeg') }}">
+    </div>
+        
+        
+
+</body>
+</html>

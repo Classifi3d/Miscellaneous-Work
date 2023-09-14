@@ -1,0 +1,71 @@
+<script type="text/javascript"> 
+
+//object
+var clock = {
+	"hour":10,
+	"minute":46, //int or string
+	"morning messages":["good morning","hello there"]//arrays 
+};
+
+var clock_time= clock.minute + clock.hour*60;//same thing
+var clock_time= clock["minute"] + clock["hour"]*60;
+console.log(clock_time + " minutes");
+
+clock.hour=9;//changes the values of properties of an object
+console.log(clock.minute + clock.hour*60 + " minutes");
+
+
+//use objects for properties
+var testObj = {
+1:"property 1",
+2:"property 2",
+3:"property 3",
+}
+var testObjNum=1;
+console.log(testObj[testObjNum]);
+
+testObj.j="property 4";//adding properties to an object
+delete testObj.j;//deleting properties from an object
+
+console.log(testObj[1])
+if(testObj[0]!=null) console.log("YES!!");//propety 0 doesn't exist therefor it return a null value
+
+//array of objecta
+var arrayObj = [
+	{
+		p1:"prop1",
+		p2:"prop2",
+	},
+	{
+		p1b:"prop1",
+		p2:"prop2",
+	}
+];
+console.log(arrayObj[1].p1b);// nice!
+
+//nested objects ( objects in objects)
+var nestObj = {
+	p1:"prop1",
+	p2:"prop2",
+	p3:{
+		pA:"propA",
+		pB:"propB",
+		pC:{
+			p0:"prop0",
+		},
+	},
+};
+console.log(nestObj.p3.pC.p0);
+console.log(nestObj["p3"]["pC"]["p0"]); // it work like this too
+
+
+var jsonObj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');// object builder - converts text into an object
+
+console.log(nestObj.p2);
+
+Object.freeze(nestObj);//will make all the variable types of the object ans CONST
+nestObj.p2="hey";//I won't change to value because it's froze
+
+console.log(nestObj.p2);
+
+</script>

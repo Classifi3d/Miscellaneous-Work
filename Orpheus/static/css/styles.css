@@ -1,0 +1,84 @@
+body {
+    font-family: 'Caesar Dressing', cursive;
+    background-color: #f0d1aa;
+    /* background-color: #E9DBB1; */
+}
+.margin{
+    display:inline
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+.text {
+    text-align: center;
+    font-size: 40px;
+    color:rgb(75, 55, 36);
+}
+.title{
+    text-align: center;
+    font-size: 95px;
+    color:rgb(75, 55, 36);
+}
+.input{
+    text-align: center;
+}
+
+input[type="text"]{
+    font-family: 'Caesar Dressing', cursive;
+    text-align: center;
+    background-color: tan;
+    color:rgb(75, 55, 36);
+    font-size: medium;
+    width: 190px;
+    height: 25px;
+}
+button[type="button"]{
+    font-family: 'Caesar Dressing', cursive;
+    background-color: rgb(252, 230, 201);
+    font-size: large;
+    width: 200px;
+    height: 30px;
+    color:rgb(75, 55, 36);
+}
+.buttons{
+    width: 150px;
+    
+}
+.color{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(151, 123, 49);
+}
+.flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.mood{
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+}
+
+@media (max-width: 900px) {
+    .flex-container {
+      display: inline;
+    }
+    .margin{
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .margin2{
+        display: none;
+    }
+}

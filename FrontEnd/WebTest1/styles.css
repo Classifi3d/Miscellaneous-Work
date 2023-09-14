@@ -1,0 +1,24 @@
+main div {
+  float: left;
+  margin-right: 10px;
+}
+
+main div img {
+  width: 200px;
+  border: #555555 solid 5px;
+}
+
+@media (max-width: 750px) {
+  main div img {
+    width: 100px;
+  }
+}
+
+main div img:hover {
+  border: red dotted 5px;
+}
+
+main div p {
+  float: bottom;
+}
+/*# sourceMappingURL=styles.css.map */

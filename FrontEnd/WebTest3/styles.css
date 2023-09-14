@@ -1,0 +1,45 @@
+body {
+  background-color: bisque;
+}
+
+.top-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.divs {
+  background-color: #ffaa45;
+  border: solid 10px darkorange;
+  padding: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+.divs h1 {
+  color: darkviolet;
+  text-align: center;
+}
+
+.bottom-headers {
+  background-color: #ffaa45;
+  border: solid 10px darkorange;
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.bottom-headers h1 {
+  color: darkviolet;
+  text-align: center;
+}
+
+.bottom-headers2 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

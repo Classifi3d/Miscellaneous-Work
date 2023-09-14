@@ -1,0 +1,31 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: lemonchiffon;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.divs {
+  border: 1px gray;
+  border-style: solid;
+  padding: 10px;
+}
+
+.divs:hover {
+  border-color: red;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .flex-container {
+    display: inline;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

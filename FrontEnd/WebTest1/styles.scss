@@ -1,0 +1,27 @@
+@mixin phone{
+    @media(max-width: 750px) {
+        @content;
+    }
+}
+
+main{
+    div{
+
+        float:left;
+        margin-right: 10px;
+        img{
+            
+            @include phone{
+                width: 100px;
+            }
+            width: 200px;
+            border: #555555 solid 5px;
+            &:hover{
+                border: red dotted 5px;
+            }
+        }
+        p{
+            float:bottom;
+        }
+    }
+}

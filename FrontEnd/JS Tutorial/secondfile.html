@@ -1,0 +1,86 @@
+<script type="module">
+
+//conversion functions
+
+var parsedInt=parseInt("43");
+console.log(parsedInt);
+
+var parsedIntBase=parseInt("01011",2);//base 2
+console.log(parsedIntBase);
+
+var a=2,b=3;
+a==b ? console.log(true) : console.log(false);
+a>b ? console.log("a>b") : a<b ? console.log("a<b") : console.log(a=b);
+
+// let and const
+let z=2;
+
+var arrayA= [0,1,2,3,4,5,6,7,8,9];
+for (let i = arrayA.length - 1; i >= 0; i--) {
+	console.log(arrayA[i]);
+}
+
+const CAPITAL = "value"; //read only, therefor I need to initialize with a value ; use capital letter for consts
+
+var myConcat = function hey(str1, str2) {
+	return str1.concat(str2);
+};
+
+console.log(myConcat([1,2],[3,4])); // I cannot store this a variable
+
+var array1=[0,1,2,3];
+var array2 = array1;
+var array3=[...array1];
+array1[0]=6;
+
+console.log(array2[0]);
+console.log(array3[0]);
+
+var voxel ={
+	x:3.4,
+	y:3.2,
+	z:6.2,
+	t: function(xi,yi,zi){
+		return  xi+yi+zi;
+	},
+	tSmall(xi,yi,zi){
+		return  xi+yi+zi;
+	}
+};
+
+var arrayTest=[8,3,4,2,3,4];
+
+var {x:a, y:b, z:c}= voxel;
+console.log(a,b,c);
+var [a,,b]=arrayTest;
+console.log(a,b);
+
+function removeFirstTwo(arrayRem){
+	let [,, ...arrayNew] = arrayRem;
+	return arrayNew;
+}
+console.log(` ${arrayTest}  --->  ${removeFirstTwo(arrayTest)}`); // ${ Name } use variables in strings
+
+var person = (name,age,gender) => {
+	return{
+		name:name,
+		age:age,
+		gender:gender,
+	};
+
+};
+console.log(person("a",b,"c"));
+
+console.log(voxel.tSmall(voxel.x,voxel.y,voxel.z));
+console.log(voxel.t(voxel.x,voxel.y,voxel.z));
+
+//var pixel =( voxel{x,y});
+//console.log(voxel{x,y});
+
+import {capitalizeString} from './functions.js';
+
+
+//const cap = capitalizeString("hey there!");
+
+
+</script>

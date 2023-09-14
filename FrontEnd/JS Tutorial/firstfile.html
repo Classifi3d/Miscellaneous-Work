@@ -1,0 +1,201 @@
+<script type="text/javascript">
+	
+	console.log("hello_world");
+	/*
+	int i=0;
+	while(i){
+		console.log(i);
+		i++;
+	}
+	*/
+
+var anythingGoesHere =3;
+var numersForEveryone=2.43545;
+var prod=anythingGoesHere*numersForEveryone;
+console.log(prod);
+
+var myFirstName="Dan";
+var myLastName="Mustea";
+console.log(myFirstName + " \"Dumitru\" " + myLastName + anythingGoesHere);//         \" <---------
+console.log (myFirstName + ' "Dumitru" '+ myLastName)// replace  "  with  ' 
+console.log (myFirstName + ` "Dumitru" `+ myLastName)// replace  "  with  ` 
+
+/*	
+CODE OUTPUT
+\`	single quote
+\"	double quote
+\\	backslash
+\n 	newline
+\r  carriage return
+\t  tab
+\b  backspace
+\f  form feed
+*/
+
+var codeEscapeExample2 = "FirstLine \n \t SecondLine\n \\Third Line";
+var codeEscapeExample = "Hello There!";
+console.log(codeEscapeExample);
+codeEscapeExample[0]='A';// this does not work and honestly it makes me a bit furious 
+console.log(codeEscapeExample);
+console.log(codeEscapeExample.length);
+
+var arrayFirst=[0,1,2,"null",4];
+console.log(arrayFirst[3]);
+var arrayChar=['D','a','n'];
+console.log(arrayChar);//show me "detalied" information about the array and also it's elements
+
+for (var i = 0; i <= arrayChar.length - 1; i++) {
+	document.write(arrayChar[i]);//write in page
+	console.log(arrayChar[i]);//write in console
+}console.log("\n");
+
+arrayChar.push(`ut`);
+
+for (var i = 0; i <= arrayChar.length - 1; i++) {
+	document.write(arrayChar[i]);//write in page
+}
+//end of the array
+arrayChar.push('z');//concatenates
+console.log(arrayChar);
+arrayChar.pop();//deletes last element
+console.log(arrayChar);
+
+//start of the array
+arrayChar.shift();//deletes the first elements
+console.log(arrayChar);
+arrayChar.unshift('z');//adds an element 
+console.log(arrayChar);
+
+//I can get the removed element into a variable
+var removedElement = arrayChar.pop();
+console.log(removedElement);
+
+
+
+//nested arrays
+var arrayMatrix = [ [0,1],[0,1] ]
+console.log(arrayMatrix[0][0]);
+
+/* var shoppingList = [["milk",3] ["bread",1] ["juice",2] ["eggs",3]];
+for (var i = 0; i < shoppingList.length; i++) {
+	if(shoppingList[i][1]>2) console.log(shoppingList[i][0]);
+}*/
+
+
+function timePuppy(time){//recursive puppy function
+	if(time>=0){
+	console.log("Puppy Time!");
+	timePuppy(time-1);		
+	}
+
+}
+
+function returnToSender(name){//return function
+	return "retrun "+name+" to sender!";
+
+} 
+
+timePuppy(3);
+console.log(returnToSender("Dan"));
+
+function nextInLine(a, b){
+	return a<b;
+}
+
+var testArray = [1,2,3,4,5,6];
+console.log(JSON.stringify(testArray));//different method of dispalying arrays
+console.log(nextInLine(1,2));
+var floaty=5.34323;
+
+
+/* 
+==  MATH FUNCTIONS  == Math.
+
+round - rounds float numbers
+pow - number ' ' power of ' '
+sqrt - square root
+abs - absolute positive (=modul)
+ceil - ceilling of a number 4.2 -> 5
+floor - floor of a number 4.5 -> 4
+sin - radian to a value between -1 and 1
+cos - radian to a value between -1 and 1 / I have to use Math.PI * nr of radians 
+min - smallest number of an array
+max - largest number of an array
+random - random value between 0 and <1 / I can multiply it so it's between 0 - 9 ; 0 - 99
+
+PI - value of Pi
+E - value of Euler's numbers
+
+
+*/
+console.log(Math.round(Math.sqrt(floaty) + Math.pow(floaty,2)));// Math.round() / Math.pow(,) / Math.sqrt()
+
+//small array test
+var arrayTest= ["hey","how",243];
+console.log(arrayTest[2]);
+
+
+//object
+var clock = {
+	"hour":10,
+	"minute":46, //int or string
+	"morning messages":["good morning","hello there"]//arrays 
+};
+
+var clock_time= clock.minute + clock.hour*60;//same thing
+var clock_time= clock["minute"] + clock["hour"]*60;
+console.log(clock_time + " minutes");
+
+clock.hour=9;//changes the values of properties of an object
+console.log(clock.minute + clock.hour*60 + " minutes");
+
+
+//use objects for properties
+var testObj = {
+1:"property 1",
+2:"property 2",
+3:"property 3",
+}
+var testObjNum=1;
+console.log(testObj[testObjNum]);
+
+testObj.j="property 4";//adding properties to an object
+delete testObj.j;//deleting properties from an object
+
+console.log(testObj[1])
+if(testObj[0]!=null) console.log("YES!!");//propety 0 doesn't exist therefor it return a null value
+
+//array of objects
+var arrayObj = [
+	{
+		p1:"prop1",
+		p2:"prop2",
+	},
+	{
+		p1b:"prop1",
+		p2:"prop2",
+	}
+];
+console.log(arrayObj[1].p1b);// nice!
+
+//nested objects ( objects in objects)
+var nestObj = {
+	p1:"prop1",
+	p2:"prop2",
+	p3:{
+		pA:"propA",
+		pB:"propB",
+		pC:{
+			p0:"prop0",
+		},
+	},
+};
+console.log(nestObj.p3.pC.p0);
+console.log(nestObj["p3"]["pC"]["p0"]); // it work like this too
+
+var jsonObj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');// object builder - converts text into an object
+
+
+
+
+</script>

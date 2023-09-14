@@ -1,0 +1,35 @@
+// small screen mixin
+@mixin phone{
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+// website's main attributes
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lemonchiffon;
+
+}
+
+.center-align{
+    text-align: center;
+}
+
+// borders and hover effect
+.divs{  
+    border: 1px gray;
+    border-style: solid;
+    padding: 10px;
+    &:hover{
+        border-color: red;
+    }
+}
+
+// the felx container
+.flex-container{
+    display: flex;
+    @include phone(){
+        display: inline;
+    }
+}
